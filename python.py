@@ -1,3 +1,6 @@
+import math
+
+
 def compareTriplets(a, b):
 
     return map(
@@ -94,7 +97,6 @@ print(miniMaxSum(arr))
 def birthdayCakeCandles(ar):
     return ar.count(max(ar))
 
-
     # tallest_candle = new_ar[len(new_ar)]
     # countTallestCandle =1
     # for candle in new_ar:
@@ -144,3 +146,61 @@ def balancedSums(arr):
 
 ar = [1, 1, 4, 1, 1]
 print(balancedSums(ar))
+
+temp, result = 0, 0
+
+# Pick starting point
+
+
+def maximumSum(a):
+    for i in range(0, len(a)-1):
+
+        # Pick ending point
+        temp = 0
+        for j in range(i, len(a)-1):
+
+            print([arr[i]])
+
+
+maximumSum([3, 3, 9, 9, 5])
+
+
+# def addString(string1, string2):
+#     result = ''
+#     i = len(string1)-1
+#     j = len(string2)-1
+#     carry = 0
+#     while(i >= 0 or j >= 0):
+#         sum = carry
+#         if(i > 0):
+#             sum += float(string1[i])
+#             i -= 1
+#         if(j > 0):
+#             sum += float(string2[j])
+#         result += str((sum % 10))
+#         carry = sum % 10
+#     if(carry > 0):
+#         result += carry
+#     return result.reverse().str()
+
+
+# print(addString("314", "9"))
+
+
+count = (math.floor(int((63+4)/5)*5))
+print(count)
+
+
+def kangaroo(x1, v1, x2, v2):
+    while (x1 <= 1000 and x2 <= 1000):
+        x1 += v1
+        x2 += v2
+        print(x1)
+        print(x2)
+        if(x1 == x2):
+            return True
+
+    return False
+
+
+print(kangaroo(0, 2, 5, 3))

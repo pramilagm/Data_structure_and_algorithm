@@ -97,6 +97,7 @@ print(miniMaxSum(arr))
 def birthdayCakeCandles(ar):
     return ar.count(max(ar))
 
+
     # tallest_candle = new_ar[len(new_ar)]
     # countTallestCandle =1
     # for candle in new_ar:
@@ -204,3 +205,22 @@ def kangaroo(x1, v1, x2, v2):
 
 
 print(kangaroo(0, 2, 5, 3))
+
+
+def divisibleSumPairs(n, k, ar):
+    nums = [0] * k
+    count = 0
+    for ele in ar:
+        modu = ele % k
+        print(f"{ele} {modu} {count} {nums} - after modu")
+        count += nums[(k - modu) % k]
+        print(f"{ele} {modu} {count} {nums} - after count+=")
+        nums[modu] += 1
+        print(f"{ele} {modu} {count} {nums} - after nums+=")
+        print("-----------------------")
+    return count
+
+
+arr = [1, 3, 2, 6, 1, 2]
+print(divisibleSumPairs(6, 3, arr))
+print(1//2)

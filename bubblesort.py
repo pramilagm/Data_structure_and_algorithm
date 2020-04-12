@@ -10,7 +10,6 @@ def bubbleSOrt(arr):
 
         if(swapped == False):
             break
-
     return arr
 
 

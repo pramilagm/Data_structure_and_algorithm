@@ -7,7 +7,6 @@ def heapify(arr, i):
 
     if (arr[i] > arr[p]):
         arr[i], arr[p] = arr[p], arr[i]
-
         heapify(arr, p)
 
 

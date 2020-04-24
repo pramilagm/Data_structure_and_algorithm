@@ -97,7 +97,6 @@ print(miniMaxSum(arr))
 def birthdayCakeCandles(ar):
     return ar.count(max(ar))
 
-
     # tallest_candle = new_ar[len(new_ar)]
     # countTallestCandle =1
     # for candle in new_ar:
@@ -166,26 +165,27 @@ def maximumSum(a):
 maximumSum([3, 3, 9, 9, 5])
 
 
-# def addString(string1, string2):
-#     result = ''
-#     i = len(string1)-1
-#     j = len(string2)-1
-#     carry = 0
-#     while(i >= 0 or j >= 0):
-#         sum = carry
-#         if(i > 0):
-#             sum += float(string1[i])
-#             i -= 1
-#         if(j > 0):
-#             sum += float(string2[j])
-#         result += str((sum % 10))
-#         carry = sum % 10
-#     if(carry > 0):
-#         result += carry
-#     return result.reverse().str()
+def addString(string1, string2):
+    result = ''
+    i = len(string1)-1
+    j = len(string2)-1
+    carry = 0
+
+    while(i >= 0 or j >= 0):
+        sum = carry
+        if(i > 0):
+            sum += string1[i]
+            i -= 1
+        if(j > 0):
+            sum += string2[j]
+        result += sum % 10
+        carry = sum % 10
+    if(carry > 0):
+        result += carry
+    return result.reverse().str()
 
 
-# print(addString("314", "9"))
+print(addString("314", "9"))
 
 
 count = (math.floor(int((63+4)/5)*5))
@@ -223,4 +223,3 @@ def divisibleSumPairs(n, k, ar):
 
 arr = [1, 3, 2, 6, 1, 2]
 print(divisibleSumPairs(6, 3, arr))
-print(1//2)

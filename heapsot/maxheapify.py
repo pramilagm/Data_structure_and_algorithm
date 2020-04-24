@@ -1,6 +1,7 @@
 
 def heapify(arr, n, i):
     # Find largest among root and children
+
     largest = i
     l = 2 * i + 1
     r = 2 * i + 2
@@ -17,11 +18,13 @@ def heapify(arr, n, i):
         heapify(arr, n, largest)
 
 
+
 def heapSort(arr):
     n = len(arr)
 
     # Build max heap
     for i in range(n//2-1, -1, -1):
+
         heapify(arr, n, i)
 
     for i in range(n-1, 0, -1):

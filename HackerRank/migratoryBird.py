@@ -33,23 +33,11 @@
 def migratoryBirds(arr):
 
     count = [0]*6
-    for t in map(int, arr):
+    for t in arr:
         count[t] += 1
+        print(count[t])
     print(count.index(max(count)))
-    # hash = {}
-    # for item in arr:
-    #     if item in hash:
-    #         hash[item] += 1
-    #     else:
-    #         hash[item] = 1
-
-    # max_val = max(hash.values())
-
-    # for key, val in hash.items():
-
-    #     if val == max_val:
-    #         pass
 
 
-arr = [1, 2,  4, 5, 4, 3, 2, 1, 3, 4]
+arr = [1, 2, 2, 2, 2, 4, 5, 4, 3, 2, 1, 3, 4]
 migratoryBirds(arr)

@@ -47,6 +47,20 @@ class LinkedList:
             currentNode = nextNode
         self.head = previousNode
 
+    def reverseRecursiv(self, current_node, previous_node):
+        if current_node.next is None:
+            self.head = current_node
+            current_node.next = previous_node
+            return
+        next_node = current_node.next
+        current_node.next = previous_node
+        self.reverseRecursiv(next_node, current_node)
+
+    def reverse(self):
+        if self.head is None:
+            return
+        self.reverseRecursiv(self.head, None)
+
 
 list = LinkedList()
 node1 = Node('1')
@@ -59,5 +73,6 @@ list.insertElement(node2)
 list.insertElement(node3)
 list.insertElement(node4)
 list.insertElement(node5)
-list.reverseList()
+# list.reverseList()
+list.reverse()
 list.printList()

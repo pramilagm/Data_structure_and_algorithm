@@ -70,6 +70,37 @@ class DDL:
         if new_node.next is not None:
             new_node.next.prev = new_node
 
+    def deleteFromBeg(self):
+        if self.head.next is None:
+            self.head = None
+            return
+        deleted_node = self.head
+        self.head = deleted_node.next
+        self.head.prev = None
+
+    def deleteAtLast(self):
+        if self.head.next is None:
+            self.head = None
+            return
+        current_node = self.head
+        while current_node.next.next is not None:
+            current_node = current_node.next
+        current_node.next = None
+
+    def deleteAt(self, position):
+        if position <= 0 or position > self.lenList():
+            print('the position does not Exist')
+        if position is 1:
+            self.deleteFromBeg()
+            return
+        current_node = self.head
+        index = 0
+        while index < position:
+            current_node = current_node.next
+            index += 1
+        current_node.prev.next = current_node.next
+        current_node.next.prev = current_node.prev
+
     def printList(self):
         printVal = self.head
         if self.head is None:
@@ -87,6 +118,7 @@ val4 = Node('D')
 val5 = Node('z')
 val6 = Node('F')
 val7 = Node('M')
+
 list.push(val1)
 list.push(val2)
 list.push(val3)
@@ -94,4 +126,11 @@ list.push(val4)
 list.pushFront(val5)
 list.addAt(val2, val6)
 list.addAtposition(3, val7)
+list.deleteFromBeg()
+list.deleteFromBeg()
+list.addAtposition(2, val1)
+
+list.deleteAt(2)
+list.deleteAtLast()
+list.deleteAtLast()
 list.printList()

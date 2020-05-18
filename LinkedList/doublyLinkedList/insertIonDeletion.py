@@ -29,7 +29,7 @@ class DDL:
         while current_node.next is not None:
             current_node = current_node.next
         current_node.next = new_node
-        current_node.prev = current_node
+        new_node.prev = current_node
 
     def pushFront(self, new_node):
         new_node.next = self.head

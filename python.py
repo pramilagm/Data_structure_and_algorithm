@@ -187,6 +187,7 @@ def addString(string1, string2):
 
 
 print(addString("314", "9"))
+print(addString('999', '999'))
 # count = (math.floor(int((63+4)/5)*5))
 # print(count)
 

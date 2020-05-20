@@ -36,4 +36,8 @@ stack.push(10)
 stack.push(20)
 stack.push(30)
 popped = stack.pop()
+popped = stack.pop()
+popped = stack.pop()
+popped = stack.pop()
+
 print(popped, ' poped from stack')

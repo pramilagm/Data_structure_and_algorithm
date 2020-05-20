@@ -1,5 +1,6 @@
 def mergeSort(arr):
     if len(arr) > 1:
+        print('before sorted arr', arr)
 
         #  r is the point where the array is divided into two subarrays
         r = len(arr)//2
@@ -34,9 +35,10 @@ def mergeSort(arr):
             arr[k] = M[j]
             j += 1
             k += 1
+        print('after sorted arr', arr)
 
 
-arr = [6, 5, 12, 10, 9, 1]
+arr = [1, 1, 1, 2, 2]
 mergeSort(arr)
 
 

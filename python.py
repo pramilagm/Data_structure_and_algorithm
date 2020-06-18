@@ -66,17 +66,19 @@
 # plusMinus(arr)
 
 
-# def staircase(n):
-#     printstaircase = ''
-#     for i in range(1, n+1):
-#         if (i < n):
-#             printstaircase += ' '*(n-i) + '#'*(i) + '\n'
-#         else:
-#             printstaircase += '#'*i
-#     print(printstaircase)
+def staircase(n):
+    printstaircase = ''
+    for i in range(1, n+1):
+        if (i < n):
+            # 2 < 5 - ---  # ---## --### -#### #####
+
+            printstaircase += ' '*(n-i) + '#'*(i) + '\n'
+        else:
+            printstaircase += '#'*i
+    print(printstaircase)
 
 
-# staircase(4)
+staircase(4)
 
 
 # def miniMaxSum(arr):
@@ -266,3 +268,17 @@ def left_rotation(a, d):
 
 list = [1, 2, 3, 4, 5]
 left_rotation(list, 4)
+
+
+a = [2, 4, 5, 6, 7, 7]
+b = [3, 9, 5, 6, 7, 7]
+n = len(a)
+m = len(b)
+merged = []
+
+
+arr = [50, 10, 20, 30]
+for i, v in enumerate(sorted(arr)):
+    print(arr)
+    print(i)
+    print(v)

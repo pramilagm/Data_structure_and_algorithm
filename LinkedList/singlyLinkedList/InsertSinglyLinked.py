@@ -111,33 +111,33 @@ class LinkedList:
 
 list = LinkedList()
 list.head = Node("Mon")
-e2 = Node("Tue")
-e3 = Node("Thurs")
-e4 = Node('June')
-e5 = Node('Sun')
-e6 = Node('Saturday')
-list.head.next = e2
-e2.next = e3
-list.addAt(e4, 0)
-list.addFront(e5)
-list.addFront(e6)
+# e2 = Node("Tue")
+# e3 = Node("Thurs")
+# e4 = Node('June')
+# e5 = Node('Sun')
+# e6 = Node('Saturday')
+# list.head.next = e2
+# e2.next = e3
+# list.addAt(e4, 0)
+# list.addFront(e5)
+# list.addFront(e6)
 # print('----------')
 # list.addInBetween(e2, 'wednesdays')
 
 # # j
 # list.printList()
 list.addInLast('Friday')
-# list.addInLast('Saturday')
+list.addInLast('Saturday')
 # # list.printList()
 # print('////')
 # list.deleteFromBeg()
 # list.deleteEnd()
 # list.deleteEnd()
 # list.deleteAt(4)
-# list.printList()
+list.printList()
 
-result = 0
-arr = [1, 2, 3]
-for i in arr:
-    result = result*i
-print(result)
+# result = 0
+# arr = [1, 2, 3]
+# for i in arr:
+#     result = result*i
+# print(result)

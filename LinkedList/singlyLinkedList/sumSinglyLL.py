@@ -27,11 +27,13 @@ class LinkedList:
             length += 1
         return length
 
-    def length_recur(self):
-        if self.next is None:
-            return 1
-        return 1 + self.next.length_recur()
-# sum
+    def length_recur(self, node):
+        if not node:
+            return 0
+        return 1 + self.length_recur(node.next)
+
+    def getLength(self):
+        return self.length_recur(self.head)
 
     def sum_iter(self):
         total = 0
@@ -43,10 +45,13 @@ class LinkedList:
         total += node.value
         return total
 
-    def sum_rec(self):
-        if self.next is None:
-            return self.value
-        return self.value + self.next.sum_rec()
+    def sum_rec(self, node):
+        if node.next is None:
+            return node.value
+        return node.value + self.sum_rec(node.next)
+
+    def getSum(self):
+        return self.sum_rec(self.head)
 
     def append(self, value):
         current = self.head
@@ -108,9 +113,10 @@ class LinkedList:
 # print(llist.sum_iter())
 llist = LinkedList()
 llist.head = Node(5)
-# llist.append(1)
+llist.append(1)
 llist.append(2)
 llist.append(3)
 print(llist.sum_iter())
-print(llist.length_recur())
+print(llist.getLength())
+print(llist.getSum())
 # llist.print_node()
